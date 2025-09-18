@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources | FoodFusion</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cookie Consent Popup -->
+    <div id="cookieConsent" class="cookie-consent">
+            <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary">Accept</button>
+                <button id="declineCookies" class="btn btn-outline">Decline</button>
+            </div>
+    </div>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                </div>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link ">About</a></li>
+                    <li class="nav-item"><a href="./recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Resources</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item auth-buttons" id="authButtons">
+                        <button id="loginBtn" class="btn btn-outline">Login</button>
+                        <button id="joinBtn" class="btn btn-primary" aria-label="Join FoodFusion">Join</button>
+                    </li>
+                    <li class="nav-item user-profile" id="userProfile" style="display: none;">
+                        <div class="dropdown">
+                            <button class="btn btn-outline dropdown-toggle" id="profileDropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span class="profile-email" id="profileEmail"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Saved Recipes</a>
+                                <a href="#" id="logoutBtn" class="dropdown-item">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+  <section class="resources-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>Culinary Resources</h2>
+      <p>Explore hands-on materials to improve your home cooking experience.</p>
+    </div>
+
+    <div class="resources-grid">
+      <!-- Recipe Card 1 -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/recipes/spaghetti.JPG" alt="Spaghetti Recipe">
+        </div>
+        <div class="resource-info">
+          <h3>Spaghetti Carbonara</h3>
+          <p>Classic Italian pasta with cheese. Comes with a downloadable recipe card.</p>
+          <a href="../Resources/images/recipes/spaghetti.JPG" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Recipe Card 2 -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/recipes/spring-rolls.JPG" alt="Pancake Recipe">
+        </div>
+        <div class="resource-info">
+          <h3>Spring Rolls</h3>
+          <p>Perfect weekend Spring Rolls. Includes a printable recipe card.</p>
+          <a href="../Resources/images/recipes/spring-rolls.JPG" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Recipe Card 3 -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/recipes/sponge.jpg" alt="Salad Recipe">
+        </div>
+        <div class="resource-info">
+          <h3>Sponge Cake</h3>
+          <p>Light and fluffy sponge cake recipe with baking tips. Includes a printable recipe card.</p>
+          <a href="../Resources/images/recipes/sponge.jpg" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Cooking Tutorials -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/tutorial.jpg" alt="Cooking Tutorial">
+        </div>
+        <div class="resource-info">
+          <h3>Cooking Tutorials</h3>
+          <p>Watch video tutorials to master chopping, sautéing, and plating like a chef.</p>
+          <a href="../Resources/videos/tutorial.mp4" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Instructional Videos -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/techniques.jpg" alt="Cooking Techniques">
+        </div>
+        <div class="resource-info">
+          <h3>Technique Videos</h3>
+          <p>Visual demos of knife skills, baking techniques, and more.</p>
+          <a href="../Resources/videos/techniques.mp4 class=" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Kitchen Hacks -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/kitchen-hacks.webp" alt="Kitchen Hacks">
+        </div>
+        <div class="resource-info">
+          <h3>Kitchen Hacks Guide</h3>
+          <p>Boost efficiency with quick tips and time-saving kitchen hacks.</p>
+          <a href="../Resources/videos/kitchen_hacks.mp4" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Resources Section -->
+    <div class="section-header" style="margin-top: 80px;">
+      <h2>Educational Resources</h2>
+      <p>Learn more about sustainability and renewable energy through our curated materials.</p>
+    </div>
+
+    <div class="resources-grid">
+      <!-- Renewable Guide -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/renewable-guide.jpg" alt="Renewable Guide">
+        </div>
+        <div class="resource-info">
+          <h3>Renewable Energy Guide</h3>
+          <p>An introduction to renewable sources like solar, wind, and hydro.</p>
+          <a href="../Resources/videos/renewable_guide.mp4" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Infographics -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/infographics.jpg" alt="Infographics">
+        </div>
+        <div class="resource-info">
+          <h3>Energy Infographics</h3>
+          <p>Clear visual charts explaining energy usage and sustainability impact.</p>
+          <a href="../Resources/videos/infographics.mp4" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Educational Video -->
+      <div class="resource-card">
+        <div class="resource-image">
+          <img src="../Resources/images/resources_image/edu-video.jpg" alt="Educational Video">
+        </div>
+        <div class="resource-info">
+          <h3>Energy Education Video</h3>
+          <p>Explore how renewable energy is shaping the future with this short film.</p>
+          <a href="../Resources/videos/energy_video.mp4" class="btn btn-outline" download>Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                    <p>Promoting home cooking and culinary creativity among food enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./recipes.html">Recipe Collection</a></li>
+                        <li><a href="./community.html">Community Cookbook</a></li>
+                        <li><a href="#">Culinary Resources</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="./recipes.html">Vegetarian</a></li>
+                        <li><a href="./recipes.html">Vegan</a></li>
+                        <li><a href="./recipes.html">Gluten-Free</a></li>
+                        <li><a href="./recipes.html">Quick Meals</a></li>
+                        <li><a href="./recipes.html">Desserts</a></li>
+                        <li><a href="./recipes.html">Baking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for weekly recipes and cooking tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="./policy.html#privacy">Privacy Policy</a>
+                    <a href="./policy.html#terms">Terms of Service</a>
+                    <a href="./policy.html#cookie">Cookie Policy</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 FoodFusion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <!-- Join Us Modal -->
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join FoodFusion</h2>
+            <form id="joinForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <small>Password must be at least 8 characters long</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="./Pages/policy.html">Terms of Service</a> and <a href="./Pages/policy.html">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="switchToJoin">Join FoodFusion</a></p>
+            </div>
+        </div>
+        <div id="lockMessage" style="display:none; color:red; margin-top:10px;">
+  Account locked. Try again in <span id="countdown">3:00</span> minutes.
+</div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+     <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModals()">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="resetPasswordForm">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your registered email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="new_password" placeholder="New Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+            </form>
+            <div id="resetMessage"></div>
+        </div>
+    </div>
+
+
+  <script src="../script.js"></script>
+</body>
+</html>

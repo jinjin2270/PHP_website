@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Collection | FoodFusion</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cookie Consent Popup -->
+    <div id="cookieConsent" class="cookie-consent">
+            <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary">Accept</button>
+                <button id="declineCookies" class="btn btn-outline">Decline</button>
+            </div>
+    </div>
+  <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                </div>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="./recipes.html" class="nav-link ">Recipes</a></li>
+                    <li class="nav-item"><a href="./community.html" class="nav-link ">Community</a></li>
+                    <li class="nav-item"><a href="./resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+                    <li class="nav-item auth-buttons" id="authButtons">
+                        <button id="loginBtn" class="btn btn-outline">Login</button>
+                        <button id="joinBtn" class="btn btn-primary" aria-label="Join FoodFusion">Join</button>
+                    </li>
+                    <li class="nav-item user-profile" id="userProfile" style="display: none;">
+                        <div class="dropdown">
+                            <button class="btn btn-outline dropdown-toggle" id="profileDropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span class="profile-email" id="profileEmail"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Saved Recipes</a>
+                                <a href="#" id="logoutBtn" class="dropdown-item">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contact-container">
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <p>Have a question, recipe request, or feedback? We'd love to hear from you!</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <select name="topic" required>
+          <option value="">Select a Topic</option>
+          <option value="Enquiry">General Enquiry</option>
+          <option value="Recipe Request">Recipe Request</option>
+          <option value="Feedback">Feedback</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div id="contactMessage" class="success-message" style="display:none;"></div>
+  </div>
+</main>
+
+
+ 
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                    <p>Promoting home cooking and culinary creativity among food enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./recipes.html">Recipe Collection</a></li>
+                        <li><a href="./community.html">Community Cookbook</a></li>
+                        <li><a href="./resources.html">Culinary Resources</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="./recipes.html">Vegetarian</a></li>
+                        <li><a href="./recipes.html">Vegan</a></li>
+                        <li><a href="./recipes.html">Gluten-Free</a></li>
+                        <li><a href="./recipes.html">Quick Meals</a></li>
+                        <li><a href="./recipes.html">Desserts</a></li>
+                        <li><a href="./recipes.html">Baking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for weekly recipes and cooking tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="./policy.html#privacy">Privacy Policy</a>
+                    <a href="./policy.html#terms">Terms of Service</a>
+                    <a href="./policy.html#cookie">Cookie Policy</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 FoodFusion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Join Us Modal -->
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join FoodFusion</h2>
+            <form id="joinForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <small>Password must be at least 8 characters long</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="./policy.html">Terms of Service</a> and <a href="./policy.html">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="switchToJoin">Join FoodFusion</a></p>
+            </div>
+        </div>
+        <div id="lockMessage" style="display:none; color:red; margin-top:10px;">
+  Account locked. Try again in <span id="countdown">3:00</span> minutes.
+</div>
+    </div>
+    
+    <!-- Forgot Password Modal -->
+     <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModals()">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="resetPasswordForm">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your registered email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="new_password" placeholder="New Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+            </form>
+            <div id="resetMessage"></div>
+        </div>
+    </div>
+  <script src="../script.js"></script>
+  
+</body>
+</html>

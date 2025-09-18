@@ -1,0 +1,15 @@
+
+Setup Instructions
+
+1. Import the `foodfusion` database into your local MySQL server.
+2. Configure DB credentials in PHP files (e.g., `login.php`, `register.php`).
+3. Host using XAMPP or any local server environment.
+4. Open `index.html` in your browser to get started.
+
+Screenshots & ERD
+
+Screenshots of all pages and the ERD are provided in the document file.
+
+---
+
+
