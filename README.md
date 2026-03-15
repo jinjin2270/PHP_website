@@ -2,6 +2,8 @@
 
 FoodFusion is a full-stack web application dedicated to promoting home cooking and culinary creativity among food enthusiasts. The platform allows users to discover recipes, share their culinary creations, interact with a community of food lovers, and access valuable cooking resources.
 
+Can see the demo version here ---> https://jinjin2270.github.io/PHPwebsite1_demo/
+
 ## Features
 
 User Management
