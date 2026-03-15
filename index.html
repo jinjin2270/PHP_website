@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFusion - Culinary Creativity at Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cookie Consent Popup -->
+    <div id="cookieConsent" class="cookie-consent">
+            <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary">Accept</button>
+                <button id="declineCookies" class="btn btn-outline">Decline</button>
+            </div>
+    </div>
+    <!-- Join Us Popup (initially hidden) -->
+     <div id="joinModal" class="modal welcome-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join Our Culinary Community</h2>
+            <p>Create your free account to save recipes, join discussions, and more!</p>
+            <form id="welcome-joinForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="welcome-firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="welcome-lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="welcome-email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="welcome-password" name="password" placeholder="Password" required>
+                    <small>Password must be at least 8 characters</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="welcome-confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="showLogin">Log In</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                </div>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="./Pages/about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="./Pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="./Pages/community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="./Pages/resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="./Pages/contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item auth-buttons" id="authButtons">
+                        <button id="loginBtn" class="btn btn-outline">Login</button>
+                        <button id="joinBtn" class="btn btn-primary" aria-label="Join FoodFusion">Join</button>
+                    </li>
+                    <li class="nav-item user-profile" id="userProfile" style="display: none;">
+                        <div class="dropdown">
+                            <button class="btn btn-outline dropdown-toggle" id="profileDropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span class="profile-email" id="profileEmail"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Saved Recipes</a>
+                                <a href="#" id="logoutBtn" class="dropdown-item">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<section class="css-slideshow">
+  <div class="slider">
+    <!-- Slide 1 -->
+    <figure class="slide">
+      <img src="./Resources/images/hero/hero-bg-1.jpg" alt="Family cooking" loading="lazy">
+      <figcaption class="slide-caption">
+        <h2>Family Meals</h2>
+        <p>Make memories with home-cooked meals</p>
+        <a href="./Pages/recipes.html" class="btn btn-white">Explore Recipes</a>
+      </figcaption>
+    </figure>
+    
+    <!-- Slide 2 -->
+    <figure class="slide">
+      <img src="./Resources/images/hero/hero-bg-2.jpg" alt="Fresh ingredients" loading="lazy">
+      <figcaption class="slide-caption">
+        <h2>Seasonal Ingredients</h2>
+        <p>Discover the best recipes for each season's harvest</p>
+        <a href="./Pages/resources.html" class="btn btn-white">View Resources</a>
+      </figcaption>
+    </figure>
+    
+    <!-- Slide 3 -->
+    <figure class="slide">
+      <img src="./Resources/images/hero/hero-bg-3.jpg" alt="Cooking class" loading="lazy">
+      <figcaption class="slide-caption">
+        <h2>Culinary Workshops</h2>
+        <p>Join our expert-led cooking classes and events</p>
+        <a href="./Pages/community.html" class="btn btn-white">View Events</a>
+      </figcaption>
+    </figure>
+  </div>
+  
+  <nav class="slider-nav">
+    <a href="#slide-1" class="nav-dot"></a>
+    <a href="#slide-2" class="nav-dot"></a>
+    <a href="#slide-3" class="nav-dot"></a>
+  </nav>
+</section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>At FoodFusion, we believe everyone can be a great cook</p>
+            </div>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <p>FoodFusion is dedicated to promoting home cooking and culinary creativity among food enthusiasts. We provide a platform where beginners and experienced cooks alike can share, learn, and grow their cooking skills.</p>
+                    <p>Our community-driven approach brings together diverse culinary traditions, innovative techniques, and a passion for good food made at home.</p>
+                    <button class="btn btn-primary">Learn More About Us</button>
+                </div>
+                <div class="mission-image">
+                    <img src="./Resources/images/15.jpg" alt="Our Mission">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section class="featured-recipes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Recipes</h2>
+                <p>Discover culinary delights from around the world</p>
+            </div>
+            <div class="recipes-grid">
+                <!-- Recipe cards will be populated via JavaScript -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="./Resources/images/12.jpg" alt="Recipe 1">
+                        <span class="difficulty easy">Easy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Mediterranean Pasta Salad</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 25 mins</span>
+                            <span><i class="fas fa-utensils"></i> Italian</span>
+                        </div>
+                        <p>A refreshing pasta salad with olives, feta, and sun-dried tomatoes.</p>
+                        <button class="btn btn-outline">View Recipe</button>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="./Resources/images/13.jpg" alt="Recipe 2">
+                        <span class="difficulty medium">Medium</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Thai Green Curry</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 40 mins</span>
+                            <span><i class="fas fa-utensils"></i> Thai</span>
+                        </div>
+                        <p>Aromatic and spicy curry with coconut milk and fresh vegetables.</p>
+                        <button class="btn btn-outline">View Recipe</button>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="./Resources/images/14.jpg" alt="Recipe 3">
+                        <span class="difficulty hard">Hard</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Beef Wellington</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 2 hrs 30 mins</span>
+                            <span><i class="fas fa-utensils"></i> British</span>
+                        </div>
+                        <p>Classic British dish with tender beef wrapped in puff pastry.</p>
+                        <button class="btn btn-outline">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"><a href="./Pages/recipes.html">View All Recipes</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Feed -->
+    <section class="news-feed">
+        <div class="container">
+            <div class="section-header">
+                <h2>Culinary Trends & News</h2>
+                <p>Stay updated with the latest in the food world</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./Resources/images/news-1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">May 15, 2025</span>
+                        <h3>Plant-Based Cooking Revolution</h3>
+                        <p>Discover how plant-based ingredients are transforming home cooking with innovative techniques.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./Resources/images/news-2.jpg" alt="News 2">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">May 10, 2025</span>
+                        <h3>Fermentation at Home</h3>
+                        <p>Learn the ancient art of fermentation and how to incorporate it into your modern kitchen.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./Resources/images/news-3.jpg" alt="News 3">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">May 5, 2025</span>
+                        <h3>Zero-Waste Cooking</h3>
+                        <p>Tips and tricks to reduce food waste and make the most of every ingredient in your kitchen.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Carousel -->
+    <section class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Cooking Events</h2>
+                <p>Join our live cooking sessions and workshops</p>
+            </div>
+            <div class="events-carousel">
+                <div class="event-slide">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./Resources/images/event-1.jpg" alt="Event 1">
+                            <span class="event-date">May 25, 2025</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Italian Pasta Masterclass</h3>
+                            <p>Learn authentic pasta-making techniques from Chef Marco Bianchi.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 6:00 PM GMT</span>
+                                <span><i class="fas fa-users"></i> Online</span>
+                            </div>
+                            <button class="btn btn-primary">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-slide">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./Resources/images/event-2.jpg" alt="Event 2">
+                            <span class="event-date">July 2, 2025</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Baking Fundamentals</h3>
+                            <p>Learn baking basics with Chef Sarah Johnson.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 3:00 PM GMT</span>
+                                <span><i class="fas fa-users"></i> Online</span>
+                            </div>
+                            <button class="btn btn-primary">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-slide">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./Resources/images/event-3.jpg" alt="Event 3">
+                            <span class="event-date">July 10, 2025</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Asian Street Food Workshop</h3>
+                            <p>Recreate your favorite Asian street food dishes at home with Chef Lin Wang.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 PM GMT</span>
+                                <span><i class="fas fa-users"></i> Online</span>
+                            </div>
+                            <button class="btn btn-primary">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="carousel-controls">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Join Community CTA -->
+    <section class="join-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to join our culinary community?</h2>
+                <p>Sign up today to share your recipes, connect with other food lovers, and access exclusive content.</p>
+                <button id="joinCtaBtn" class="btn btn-primary">Join FoodFusion</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🍳</span>
+                        <span class="logo-text">FoodFusion</span>
+                    </a>
+                    <p>Promoting home cooking and culinary creativity among food enthusiasts worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./Pages/about.html">About Us</a></li>
+                        <li><a href="./Pages/recipes.html">Recipe Collection</a></li>
+                        <li><a href="./Pages/community.html">Community Cookbook</a></li>
+                        <li><a href="./Pages/resources.html">Culinary Resources</a></li>
+                        <li><a href="./Pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="./Pages/recipes.html">Vegetarian</a></li>
+                        <li><a href="./Pages/recipes.html">Vegan</a></li>
+                        <li><a href="./Pages/recipes.html">Gluten-Free</a></li>
+                        <li><a href="./Pages/recipes.html">Quick Meals</a></li>
+                        <li><a href="./Pages/recipes.html">Desserts</a></li>
+                        <li><a href="./Pages/recipes.html">Baking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for weekly recipes and cooking tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="./Pages/policy.html#privacy">Privacy Policy</a>
+                    <a href="./Pages/policy.html#terms">Terms of Service</a>
+                    <a href="./Pages/policy.html#cookie">Cookie Policy</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 FoodFusion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Join Us Modal -->
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join FoodFusion</h2>
+            <form id="joinForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <small>Password must be at least 8 characters long</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="./Pages/policy.html">Terms of Service</a> and <a href="./Pages/policy.html">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                    <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="switchToJoin">Join FoodFusion</a></p>
+            </div>
+        </div>
+        <div id="lockMessage" style="display:none; color:red; margin-top:10px;">
+  Account locked. Try again in <span id="countdown">3:00</span> minutes.
+</div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+     <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModals()">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="resetPasswordForm">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your registered email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="new_password" placeholder="New Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+            </form>
+            <div id="resetMessage"></div>
+        </div>
+    </div>
+
+    
+    <script src="./script.js"></script>
+    
+</body>
+</html>
